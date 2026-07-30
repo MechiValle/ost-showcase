@@ -4,6 +4,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { formatSongCount } from "@/i18n/translations";
 import MusicNoteIcon from "./icons/MusicNoteIcon";
 import "./ProjectCard.css";
+import { assetUrl } from "@/utils/assetUrl";
 
 interface ProjectCardProps {
   project: ProjectWithStats;
@@ -17,7 +18,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <Link to={`/project/${project.slug}`} className="project-card">
       <div className="project-card__cover">
         {project.coverSrc ? (
-          <img src={project.coverSrc} alt={displayName} />
+          <img src={assetUrl(project.coverSrc)} alt={displayName} />
         ) : (
           <MusicNoteIcon className="project-card__placeholder-icon" />
         )}

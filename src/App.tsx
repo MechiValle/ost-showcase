@@ -14,7 +14,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <PlayerProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Header />
           <div className="app-content">
             <Routes>

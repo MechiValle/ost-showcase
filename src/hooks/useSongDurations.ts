@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Song } from "@/types/song";
+import { assetUrl } from "@/utils/assetUrl";
 
 export function useSongDurations(songs: Song[]): Record<string, number> {
   const [durations, setDurations] = useState<Record<string, number>>({});
@@ -8,7 +9,7 @@ export function useSongDurations(songs: Song[]): Record<string, number> {
     const audios: HTMLAudioElement[] = [];
 
     songs.forEach((song) => {
-      const audio = new Audio(song.audioSrc);
+      const audio = new Audio(assetUrl(song.audioSrc));
       const handleLoadedMetadata = () => {
         setDurations((prev) => ({ ...prev, [song.id]: audio.duration }));
       };

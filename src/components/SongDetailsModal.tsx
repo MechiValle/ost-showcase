@@ -3,6 +3,7 @@ import { Project } from '@/types/project';
 import { useLanguage } from '@/i18n/LanguageContext';
 import MusicNoteIcon from './icons/MusicNoteIcon';
 import './SongDetailsModal.css';
+import { assetUrl } from "@/utils/assetUrl";
 
 interface SongDetailsModalProps {
   song: Song;
@@ -29,7 +30,7 @@ export default function SongDetailsModal({
         <div className='song-modal__header'>
           <div className='song-modal__cover'>
             {project.coverSrc ? (
-              <img src={project.coverSrc} alt={song.title} />
+              <img src={assetUrl(project.coverSrc)} alt={song.title} />
             ) : (
               <MusicNoteIcon className='song-modal__placeholder-icon' />
             )}
@@ -52,7 +53,7 @@ export default function SongDetailsModal({
         {song.screenshotSrc && (
           <img
             className='song-modal__screenshot'
-            src={song.screenshotSrc}
+            src={assetUrl(song.screenshotSrc)}
             alt={song.title}
           />
         )}

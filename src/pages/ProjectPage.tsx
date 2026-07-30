@@ -12,6 +12,7 @@ import PlayIcon from '@/components/icons/PlayIcon';
 import PauseIcon from '@/components/icons/PauseIcon';
 import MusicNoteIcon from '@/components/icons/MusicNoteIcon';
 import './ProjectPage.css';
+import { assetUrl } from "@/utils/assetUrl";
 
 export default function ProjectPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -62,7 +63,7 @@ export default function ProjectPage() {
       <div className='project-page__header'>
         <div className='project-page__cover'>
           {project.coverSrc ? (
-            <img src={project.coverSrc} alt={displayName} />
+            <img src={assetUrl(project.coverSrc)} alt={displayName} />
           ) : (
             <MusicNoteIcon className='project-page__placeholder-icon' />
           )}

@@ -8,6 +8,7 @@ import {
 } from "react";
 import { Song } from "@/types/song";
 import { Project } from "@/types/project";
+import { assetUrl } from "@/utils/assetUrl";
 
 interface PlayerContextValue {
   currentSong: Song | null;
@@ -95,7 +96,7 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio || !currentSong) return;
-    audio.src = currentSong.audioSrc;
+    audio.src = assetUrl(currentSong.audioSrc);
     audio.currentTime = 0;
     setCurrentTime(0);
     setDuration(0);
