@@ -1,0 +1,146 @@
+.sticky-player {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-surface);
+  border-top: 0.5px solid var(--color-border);
+}
+
+.sticky-player__mini-view {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.sticky-player__mini-title {
+  font-size: 13px;
+  color: var(--color-text-primary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  max-width: 40%;
+}
+
+.sticky-player__mini-bar {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-secondary);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sticky-player__mini-bar-fill {
+  height: 100%;
+  background: var(--color-accent);
+}
+
+.sticky-player__expanded-view {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 20px 16px;
+}
+
+.sticky-player--expanded .sticky-player__mini-view {
+  display: none;
+}
+
+.sticky-player--expanded .sticky-player__expanded-view {
+  display: flex;
+}
+
+.sticky-player__info {
+  min-width: 0;
+}
+
+.sticky-player__song {
+  font-size: 13px;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.sticky-player__project {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin: 2px 0 0;
+}
+
+.sticky-player__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.sticky-player__control {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.sticky-player__control:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.sticky-player__control--main {
+  color: var(--color-text-primary);
+}
+
+.sticky-player__progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sticky-player__time {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  min-width: 32px;
+}
+
+.sticky-player__bar {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-secondary);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.sticky-player__bar-fill {
+  height: 100%;
+  background: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+  .sticky-player__mini-view {
+    display: none !important;
+  }
+
+  .sticky-player__expanded-view {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    padding: 10px 20px;
+  }
+
+  .sticky-player__info {
+    min-width: 160px;
+  }
+
+  .sticky-player__progress {
+    flex: 1;
+  }
+}

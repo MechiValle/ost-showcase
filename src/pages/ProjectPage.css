@@ -1,0 +1,120 @@
+.project-page {
+  padding: 1.5rem;
+  padding-bottom: 100px;
+  max-width: 640px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.project-page__back {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.project-page__header {
+  display: flex;
+  gap: 16px;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.project-page__cover {
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-md);
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-page__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.project-page__placeholder-icon {
+  color: var(--color-secondary);
+}
+
+.project-page__name {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.project-page__year {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin: 0 0 8px;
+}
+
+.project-page__description {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.project-page__table {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-page__row {
+  display: grid;
+  grid-template-columns: 32px 1fr 60px 60px;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 4px;
+  border-radius: var(--radius-sm);
+}
+
+.project-page__row--header {
+  border-bottom: 0.5px solid var(--color-border);
+  padding-bottom: 8px;
+}
+
+.project-page__row--header span {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.project-page__row--active {
+  background: var(--color-surface-raised);
+}
+
+.project-page__row--active .project-page__title {
+  color: var(--color-accent);
+}
+
+.project-page__play-button {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.project-page__title {
+  font-size: 13px;
+  color: var(--color-text-primary);
+}
+
+.project-page__meta {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.project-page__title--clickable {
+  cursor: pointer;
+}
+
+.project-page__title--clickable:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,7 @@
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  padding: 1.5rem;
+  animation: fadeIn 0.3s ease-out;
+}

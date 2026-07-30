@@ -1,0 +1,59 @@
+:root {
+  --color-bg: #101513;
+  --color-surface: #1a211e;
+  --color-surface-raised: #221f18;
+  --color-border: #2c332f;
+  --color-accent: #cd8c95;
+  --color-accent-text: #3a1f24;
+  --color-secondary: #5e8577;
+  --color-text-primary: #e5eae7;
+  --color-text-secondary: #a7b3ae;
+  --color-text-muted: #7c8985;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-content {
+  padding-bottom: 90px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
