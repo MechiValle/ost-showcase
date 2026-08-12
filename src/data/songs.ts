@@ -150,8 +150,8 @@ export const songs: Song[] = [
     year: 2024,
     audioSrc: "/audio/no-project-a-game-of-spies.mp3",
     details: {
-      en: "I came up with it while watching Spy vs. Spy.",
-      es: "Surgió mirando Spy vs. Spy.",
+      en: "No description available.",
+      es: "Ninguna descripción disponible.",
     },
   },
   {
@@ -205,8 +205,8 @@ export const songs: Song[] = [
     year: 2026,
     audioSrc: "/audio/no-project-something-new.mp3",
     details: {
-      en: "I've been watching a lot of anime lately.",
-      es: "Estuve mirando mucho animé últimamente.",
+      en: "No description available.",
+      es: "Ninguna descripción disponible.",
     },
   },
     {
@@ -231,6 +231,17 @@ export const songs: Song[] = [
     details: {
       en: "Cover of the famous song by Leon Gieco.",
       es: "Famosa canción de León Gieco reversionada.",
+    },
+  },
+    {
+    id: "covers-if-i-ever",
+    title: "If I Ever",
+    projectId: "cover-songs",
+    year: 2025,
+    audioSrc: "/audio/covers-if-i-ever.mp3",
+    details: {
+      en: "A cover of If I Ever Leave this World Alive by Flogging Molly.",
+      es: "If I Ever Leave this World Alive por Flogging Molly, reversionada.",
     },
   },
 ];
